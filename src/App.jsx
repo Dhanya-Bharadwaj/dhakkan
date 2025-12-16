@@ -1,11 +1,13 @@
 import './App.css'
 import caps7 from './assets/caps7.png'
+import caps4 from './assets/caps 4.png'
 
 function App() {
   return (
     <div className="app-wrapper">
       {/* PAGE 1: Navbar + Hero Text (First Half) */}
       <div className="page page-1">
+        <div className="caps4-bg" style={{ backgroundImage: `url(${caps4})` }} aria-hidden="true" />
         <div className="nav-spacer" aria-hidden="true" />
         
         <main className="content content-1">

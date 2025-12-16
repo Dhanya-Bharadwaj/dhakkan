@@ -1,7 +1,7 @@
 /* Base */
 * { box-sizing: border-box; }
-html, body, #root { height: 100%; margin: 0; }
-body { background: #ffffff; font-family: 'Helvetica Neue', Arial, sans-serif; color: #0a0a0a; }
+html, body, #root { height: 100%; margin: 0; overflow-x: hidden; }
+body { background: #ffffff; font-family: 'Helvetica Neue', Arial, sans-serif; color: #0a0a0a; overflow-y: auto; }
 
 .app-wrapper {
   width: 100%;
@@ -12,16 +12,34 @@ body { background: #ffffff; font-family: 'Helvetica Neue', Arial, sans-serif; co
   min-height: 100vh;
   background: #ffffff;
   padding: 20px 40px 48px;
+  overflow: visible;
 }
 
 .page-1 {
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: visible;
+}
+
+.caps4-bg {
+  position: absolute;
+  top: -480px;
+  right: -240px;
+  width: 800px;
+  height: 850px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right top;
+  opacity: 1;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .page-2 {
   background: #ffffff;
   position: relative;
+  overflow: visible;
 }
 
 .caps7-bg {

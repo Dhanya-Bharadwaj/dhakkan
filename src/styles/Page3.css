@@ -1,0 +1,125 @@
+/* Page3.css */
+
+/* Reset & Base Fonts */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif; /* Use a clean sans-serif close to the design */
+  -webkit-font-smoothing: antialiased;
+}
+
+.page3-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+  position: relative;
+  overflow-x: hidden; /* Prevent horizontal scroll if bottle tilts too far */
+  overflow-y: visible; /* Let the document handle vertical scroll only */
+}
+
+/* Navbar Placeholder - Keeping space at top */
+.navbar-space {
+  width: 100%;
+  height: 50px; /* Reduced by ~50% to cut top whitespace */
+  display: block;
+}
+
+/* GRID LAYOUT 
+   We use a 3-column grid.
+   Column 1: Left Text
+   Column 2: Bottle
+   Column 3: Right Text
+*/
+.content-area {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr 1fr; /* Middle column is slightly narrower for the bottle */
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 10px 50px; /* reduce top padding to tighten space */
+  position: relative;
+  height: auto;
+  min-height: auto; /* avoid creating an inner scroll area */
+  overflow: visible; /* ensure no nested scrolling */
+  align-items: center;
+}
+
+/* Left Section Positioning */
+.text-section.left-align {
+  padding-right: 20px;
+  align-self: flex-start; /* Pushes this block to the TOP */
+  margin-top: 00px; /* Reduced by ~50% */
+}
+
+/* Right Section Positioning */
+.text-section.right-align {
+  padding-left: 20px;
+  align-self: flex-end; /* Pushes this block to the BOTTOM */
+  margin-bottom: 100px; /* Pull up slightly from bottom edge */
+}
+
+/* Typography Matches */
+.main-heading {
+  font-size: 36px; /* Adjust for scale */
+  font-weight: 800; /* Extra bold */
+  color: #000;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+.blue-text {
+  color: #1a3c8e; /* The specific deep blue from the image */
+}
+
+.description-text {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  max-width: 400px; /* Ensures text creates the correct block shape */
+}
+
+/* Image Styling */
+.image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1; /* Ensure bottle sits well */
+}
+
+.bottle-image {
+  width: 500px; /* +20% width from 350px */
+  height: 700px; /* +30% height from ~540px baseline */
+  position: relative;
+  transform: rotate(25deg) translateY(-40px) scaleY(1.3);
+  
+  /* ROTATION & SHADOW to match the screenshot */
+  /* If your raw image is straight vertical, keep this rotation. 
+     If your raw image is already tilted, remove the transform. */
+  /* This creates the floating/3D shadow effect seen in the design */
+  filter: drop-shadow(15px 15px 15px rgba(0, 0, 0, 0.2));
+}
+
+/* RESPONSIVE TWEAKS */
+@media (max-width: 900px) {
+  .content-area {
+    grid-template-columns: 1fr; /* Stack visually on mobile */
+    height: auto;
+    text-align: center;
+  }
+
+  .text-section.left-align,
+  .text-section.right-align {
+    align-self: center;
+    margin: 40px 0;
+    padding: 0;
+  }
+
+  .description-text {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}

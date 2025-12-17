@@ -1,6 +1,8 @@
 import './App.css'
 import caps7 from './assets/caps7.png'
 import caps4 from './assets/caps 4.png'
+import caps6 from './assets/caps 6.png'
+import Page3 from './components/Page3'
 
 function App() {
   return (
@@ -8,6 +10,7 @@ function App() {
       {/* PAGE 1: Navbar + Hero Text (First Half) */}
       <div className="page page-1">
         <div className="caps4-bg" style={{ backgroundImage: `url(${caps4})` }} aria-hidden="true" />
+        <div className="caps6-bg" style={{ backgroundImage: `url(${caps6})` }} aria-hidden="true" />
         <div className="nav-spacer" aria-hidden="true" />
         
         <main className="content content-1">
@@ -78,6 +81,9 @@ function App() {
         </section>
         </main>
       </div>
+
+      {/* PAGE 3: Bottle Section */}
+      <Page3 />
     </div>
   )
 }

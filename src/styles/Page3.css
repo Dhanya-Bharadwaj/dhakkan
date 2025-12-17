@@ -73,3 +73,56 @@
   color: #222;
   z-index: 1;
 }
+
+/* Responsive Page 3 - maintain layout positioning */
+@media (max-width: 1200px) {
+  .bottle-bg { width: 550px; height: 980px; }
+  .left-text-block { max-width: 560px; left: 60px; top: 80px; }
+  .left-title { font-size: 38px; }
+  .left-subtitle { font-size: 20px; max-width: 450px; }
+  .right-text-block { right: 60px; max-width: 380px; font-size: 20px; top: 65%; }
+  .navbar-spacer { height: 60px; }
+}
+
+@media (max-width: 960px) {
+  .bottle-bg { width: 528px; height: 960px; }
+  .left-text-block { max-width: 480px; left: 40px; top: 60px; }
+  .left-title { font-size: 34px; }
+  .left-subtitle { font-size: 22px; max-width: 360px; }
+  .right-text-block { right: 20px; max-width: 320px; font-size: 18px; top: 80%; }
+  .navbar-spacer { height: 50px; }
+}
+@media (max-width: 740px) {
+  .bottle-bg { width: 440px; height: 800px; top: 43%; left: 50%; transform: translate(-50%, -50%) rotate(32deg); }
+  .left-text-block { max-width: 440px; left: 24px; top: 90px; }
+  .left-title { font-size: 30px; }
+  .left-subtitle { font-size: 20px; max-width: 280px; }
+  .right-text-block { right: 30px; max-width: 280px; font-size: 19px; top: 75%; }
+  .navbar-spacer { height: 40px; }
+}
+@media (max-width: 640px) {
+  .bottle-bg { width: 380px; height: 700px; top: 43%; left: 50%; transform: translate(-50%, -50%) rotate(32deg); }
+  .left-text-block { max-width: 400px; left: 24px; top: 90px; }
+  .left-title { font-size: 28px; }
+  .left-subtitle { font-size: 18px; max-width: 250px; }
+  .right-text-block { right: 22px; max-width: 280px; font-size: 18px; top: 73%; }
+  .navbar-spacer { height: 40px; }
+}
+
+@media (max-width: 540px) {
+  .bottle-bg { width: 350px; height: 600px; top: 43%; left: 50%; transform: translate(-50%, -50%) rotate(32deg); }
+  .left-text-block { max-width: 380px; left: 24px; top: 70px; }
+  .left-title { font-size: 26px; }
+  .left-subtitle { font-size: 16px; max-width: 220px; }
+  .right-text-block { right: 2px; max-width: 220px; font-size: 15px; top: 73%; }
+  .navbar-spacer { height: 40px; }
+}
+
+@media (max-width: 400px) {
+  .bottle-bg { width: 330px; height: 570px; top: 47%; left: 50%; transform: translate(-50%, -50%) rotate(32deg); }
+  .left-text-block { max-width: 380px; left: 24px; top: 70px; }
+  .left-title { font-size: 22px; }
+  .left-subtitle { font-size: 13px; max-width: 180px; }
+  .right-text-block { right: 10px; max-width: 180px; font-size: 13px; top: 83%; }
+  .navbar-spacer { height: 40px; }
+}

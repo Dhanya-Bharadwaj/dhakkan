@@ -261,23 +261,69 @@ body { background: #ffffff; font-family: 'Helvetica Neue', Arial, sans-serif; co
   .content-1 { padding-left: 20px; }
   .hero-title { font-size: 52px; }
   .subhead p { font-size: 24px; }
+  
+  /* Scale down background images */
+  .caps4-bg { width: 600px; height: 640px; top: -360px; right: -180px; }
+  .caps6-bg { width: 550px; height: 700px; }
+  .caps7-bg { width: 900px; height: 1100px; top: -350px; left: -250px; }
 }
 
 @media (max-width: 960px) {
   .page { padding: 20px 24px 36px; }
   .content-1 { padding-left: 0; }
-  .midline-block { grid-template-columns: 1fr; row-gap: 16px; }
-  .bottle-spacer { display: none; }
-  .petition-row { grid-template-columns: 1fr; row-gap: 16px; }
-  .petition-spacer { display: none; }
+  
+  /* Scale down background images for mobile */
+  .caps4-bg { width: 400px; height: 430px; top: -240px; right: -120px; }
+  .caps6-bg { width: 350px; height: 460px; right: -100px; }
+  .caps7-bg { width: 600px; height: 730px; top: -200px; left: -150px; }
+  
+  /* Stack midline block */
+  .midline-block { 
+    grid-template-columns: 1fr; 
+    row-gap: 24px; 
+    padding: 20px 24px 0;
+  }
+  .mid-copy { grid-column: 1; }
+  .mid-copy p { font-size: 18px; }
+  
+  /* Stack petition row */
+  .petition-row { 
+    grid-template-columns: 1fr; 
+    row-gap: 24px; 
+    padding: 40px 24px 0;
+  }
   .petition-content { grid-column: 1; }
-  .quote-row { flex-direction: column; align-items: flex-start; }
+  
+  /* Stack quote row */
+  .quote-row { 
+    display: flex;
+    flex-direction: column; 
+    gap: 32px;
+    padding: 40px 24px 60px;
+  }
+  .quote-card { max-width: 100%; }
+  .cta-block { width: 100%; }
 }
 
 @media (max-width: 640px) {
   .page { padding: 16px 20px 28px; }
   .hero-title { font-size: 36px; }
-  .subhead p { font-size: 20px; }
-  .link { font-size: 16px; }
-  .quote-card { max-width: 100%; }
+  .subhead p { font-size: 18px; }
+  .link { font-size: 14px; }
+  
+  /* Mobile text sizes */
+  .mid-copy p { font-size: 16px; }
+  .petition-text { font-size: 14px; }
+  .cta-line { font-size: 18px; }
+  .cta-button { 
+    padding: 14px 28px; 
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+  }
+  .quote-card { 
+    padding: 20px 24px;
+  }
+  .quote-card p { font-size: 16px; }
+  .quote-mark { font-size: 32px; }
 }

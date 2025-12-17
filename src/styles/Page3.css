@@ -14,11 +14,9 @@ body {
 
 .page3-container {
   width: 100%;
-  min-height: 100vh;
   background-color: #ffffff;
   position: relative;
-  overflow-x: hidden; /* Prevent horizontal scroll if bottle tilts too far */
-  overflow-y: visible; /* Let the document handle vertical scroll only */
+  overflow-x: hidden; /* Prevent horizontal scroll only */
 }
 
 /* Navbar Placeholder - Keeping space at top */
@@ -36,15 +34,13 @@ body {
 */
 .content-area {
   display: grid;
-  grid-template-columns: 1fr 0.8fr 1fr; /* Middle column is slightly narrower for the bottle */
-  max-width: 1300px;
+  grid-template-columns: 1fr 0.8fr 1fr;
   margin: 0 auto;
-  padding: 10px 50px; /* reduce top padding to tighten space */
+  padding: 10px 50px;
   position: relative;
-  height: auto;
-  min-height: auto; /* avoid creating an inner scroll area */
-  overflow: visible; /* ensure no nested scrolling */
   align-items: center;
+  height: auto;
+  overflow: visible;
 }
 
 /* Left Section Positioning */

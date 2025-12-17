@@ -2,7 +2,7 @@
 
 /* Base */
 * { box-sizing: border-box; }
-html, body, #root { height: 100%; margin: 0; overflow-x: hidden; }
+html, body, #root { margin: 0; overflow-x: hidden; }
 body { background: #ffffff; font-family: 'Helvetica Neue', Arial, sans-serif; color: #0a0a0a; overflow-y: auto; }
 
 .app-wrapper {
@@ -83,7 +83,6 @@ body { background: #ffffff; font-family: 'Helvetica Neue', Arial, sans-serif; co
 
 .content {
   width: 100%;
-  max-width: 1400px;
   margin: 0 auto;
   position: relative;
   z-index: 2;
@@ -100,7 +99,6 @@ body { background: #ffffff; font-family: 'Helvetica Neue', Arial, sans-serif; co
 /* Hero */
 .hero-block {
   margin-top: 20px;
-  max-width: 1100px;
 }
 
 .hero-title {
@@ -138,7 +136,6 @@ body { background: #ffffff; font-family: 'Helvetica Neue', Arial, sans-serif; co
   grid-template-columns: 1fr 1fr;
   column-gap: 80px;
   align-items: start;
-  max-width: 1400px;
   margin: 0 auto;
   padding: 0px 60px 0;
 }
@@ -170,7 +167,6 @@ body { background: #ffffff; font-family: 'Helvetica Neue', Arial, sans-serif; co
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 80px;
-  max-width: 1400px;
   margin: 0 auto;
   padding: 60px 80px 0;
 }
@@ -219,7 +215,6 @@ body { background: #ffffff; font-family: 'Helvetica Neue', Arial, sans-serif; co
   grid-template-columns: 1fr 1fr;
   column-gap: 80px;
   align-items: start;
-  max-width: 1400px;
   margin: 0 auto;
   padding: 60px 80px 100px;
 }
@@ -228,7 +223,6 @@ body { background: #ffffff; font-family: 'Helvetica Neue', Arial, sans-serif; co
   border: 1px solid #d5d6da;
   border-radius: 16px;
   padding: 24px 28px 28px;
-  max-width: 480px;
   background: #ffffff;
   box-shadow: 0 8px 14px rgba(0,0,0,0.04);
   grid-column: 1;

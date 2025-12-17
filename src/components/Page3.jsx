@@ -1,43 +1,43 @@
+// Page3.jsx
 import React from 'react';
 import '../styles/Page3.css';
-import bottleImage from '../assets/kinley bottle.png'; 
+import bottleImg from '../assets/kinley bottle.png'; // <-- your file
 
-const Page3 = () => {
+export default function Page3() {
   return (
     <div className="page3-container">
-      {/* Navbar Placeholder */}
-      <nav className="navbar-space">
-        {/* Navbar code will go here later */}
-      </nav>
+      <div className="navbar-spacer" />
 
-      <main className="content-area">
-        
-        {/* Left Section: Title + Top Paragraph */}
-        <section className="text-section left-align">
-          <h1 className="main-heading">
-            Bridging the design gap,<br />
-            so there are <span className="blue-text">no missing caps.</span>
-          </h1>
-          <p className="description-text">
-            The absence of tethered caps in India is not just a design gap, it’s a missed opportunity to reduce plastic waste at scale.
-          </p>
-        </section>
+      {/* Background bottle */}
+      <img
+        src={bottleImg}
+        alt=""
+        className="bottle-bg"
+        draggable={false}
+      />
 
-        {/* Center Section: Bottle Image */}
-        <div className="image-section">
-          <img src={bottleImage} alt="Kenley Bottle" className="bottle-image" />
-        </div>
+      {/* Left-top text block */}
+      <div className="left-text-block">
+        <h1 className="left-title">
+          Bridging the design gap,
+          <br />
+          so there are <span className="blue-caps">no missing caps.</span>
+        </h1>
+        <p className="left-subtitle">
+          The absence of tethered caps in India is not just a design gap, it's
+          a missed opportunity to reduce plastic waste at scale.
+        </p>
+      </div>
 
-        {/* Right Section: Bottom Paragraph */}
-        <section className="text-section right-align">
-          <p className="description-text">
-            By piecing together discarded plastic caps into a tidal wave, Cap-tured Earth highlights the growing crisis of single-use plastics and the urgent need for planet-conscious product designs like tethered caps.
-          </p>
-        </section>
-
-      </main>
+      {/* Right-bottom text block */}
+      <div className="right-text-block">
+        <p>
+          By piecing together discarded plastic caps into a tidal wave,
+          Cap-tured Earth highlights the growing crisis of single-use plastics
+          and the urgent need for planet-conscious product designs like tethered
+          caps.
+        </p>
+      </div>
     </div>
   );
-};
-
-export default Page3;
+}

@@ -50,6 +50,21 @@ function App() {
           </div>
         </section>
 
+        <section className="caps7-mobile">
+          <div className="caps7-quote-row">
+            <div className="caps7-img-wrapper">
+              <img src={caps7} alt="" />
+            </div>
+            <div className="mobile-quote-card">
+              <div className="quote-mark">"</div>
+              <p>
+                I pledge to support tethered caps as a simple design solution to prevent plastic pollution.
+              </p>
+              <div className="quote-mark end">"</div>
+            </div>
+          </div>
+        </section>
+
         <section className="petition-row">
           <div className="petition-spacer" aria-hidden="true" />
           <div className="petition-content">

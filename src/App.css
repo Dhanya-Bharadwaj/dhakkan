@@ -7,6 +7,7 @@ body { background: #ffffff; font-family: 'Helvetica Neue', Arial, sans-serif; co
 
 .app-wrapper {
   width: 100%;
+  overflow-x: hidden;
 }
 
 .page {
@@ -14,7 +15,8 @@ body { background: #ffffff; font-family: 'Helvetica Neue', Arial, sans-serif; co
   min-height: 100vh;
   background: #ffffff;
   padding: 20px 40px 48px;
-  overflow: visible;
+  overflow-x: hidden;
+  overflow-y: visible;
   position: relative;
 }
 
@@ -77,6 +79,10 @@ body { background: #ffffff; font-family: 'Helvetica Neue', Arial, sans-serif; co
   pointer-events: none;
   transform: rotate(15deg);
   transform-origin: center center;
+}
+
+.caps7-mobile {
+  display: none;
 }
 
 .nav-spacer { height: 108px; }
@@ -220,11 +226,11 @@ body { background: #ffffff; font-family: 'Helvetica Neue', Arial, sans-serif; co
 }
 
 .quote-card {
-  border: 1px solid #d5d6da;
-  border-radius: 16px;
-  padding: 24px 28px 28px;
-  background: #ffffff;
-  box-shadow: 0 8px 14px rgba(0,0,0,0.04);
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
   grid-column: 1;
   position: relative;
   z-index: 2;
@@ -244,6 +250,7 @@ body { background: #ffffff; font-family: 'Helvetica Neue', Arial, sans-serif; co
   font-size: 40px;
   font-weight: 800;
   line-height: 1;
+  color: #1a1a1a;
 }
 
 .quote-mark.end { text-align: right; }
@@ -255,75 +262,482 @@ body { background: #ffffff; font-family: 'Helvetica Neue', Arial, sans-serif; co
   color: #1f1f1f;
 }
 
-/* Responsive */
-@media (max-width: 1200px) {
-  .page { padding: 20px 30px 40px; }
-  .content-1 { padding-left: 20px; }
-  .hero-title { font-size: 52px; }
-  .subhead p { font-size: 24px; }
+/* Responsive - Comprehensive coverage from 200px to 2500px */
+
+/* Extra Large Screens: 2500px+ */
+@media (min-width: 2500px) {
+  .page { padding: 40px 120px 80px; }
+  .hero-title { font-size: 90px; }
+  .subhead p { font-size: 42px; }
+  .link { font-size: 26px; }
   
-  /* Scale down background images */
-  .caps4-bg { width: 600px; height: 640px; top: -360px; right: -180px; }
-  .caps6-bg { width: 550px; height: 700px; }
-  .caps7-bg { width: 900px; height: 1100px; top: -350px; left: -250px; }
+  .caps4-bg { width: 1200px; height: 1280px; top: -720px; right: -360px; }
+  .caps6-bg { width: 1050px; height: 1350px; right: -320px; }
+  .caps7-bg { width: 1650px; height: 1950px; top: -620px; left: -450px; }
+  
+  .midline-block { column-gap: 140px; padding: 0px 120px 0; }
+  .mid-copy p { font-size: 32px; }
+  .petition-row { column-gap: 140px; padding: 100px 140px 0; }
+  .petition-text { font-size: 26px; }
+  .cta-line { font-size: 34px; }
+  .cta-button { padding: 24px 56px; font-size: 24px; }
+  .quote-row { column-gap: 140px; padding: 100px 140px 140px; }
+  .quote-card { padding: 40px 48px 48px; }
+  .quote-card p { font-size: 30px; }
+  .quote-mark { font-size: 64px; }
 }
 
-@media (max-width: 960px) {
-  .page { padding: 20px 24px 36px; }
-  .content-1 { padding-left: 0; }
+/* 2300px - 2499px */
+@media (min-width: 2300px) and (max-width: 2499px) {
+  .page { padding: 36px 110px 72px; }
+  .hero-title { font-size: 84px; }
+  .subhead p { font-size: 38px; }
+  .link { font-size: 24px; }
   
-  /* Scale down background images for mobile */
-  .caps4-bg { width: 400px; height: 430px; top: -240px; right: -120px; }
-  .caps6-bg { width: 350px; height: 460px; right: -100px; }
-  .caps7-bg { width: 600px; height: 730px; top: -200px; left: -150px; }
+  .caps4-bg { width: 1100px; height: 1170px; top: -660px; right: -330px; }
+  .caps6-bg { width: 950px; height: 1230px; right: -290px; }
+  .caps7-bg { width: 1550px; height: 1830px; top: -580px; left: -420px; }
   
-  /* Stack midline block */
-  .midline-block { 
-    grid-template-columns: 1fr; 
-    row-gap: 24px; 
-    padding: 20px 24px 0;
-  }
+  .midline-block { column-gap: 130px; padding: 0px 110px 0; }
+  .mid-copy p { font-size: 30px; }
+  .petition-row { column-gap: 130px; padding: 90px 130px 0; }
+  .petition-text { font-size: 24px; }
+  .cta-line { font-size: 32px; }
+  .cta-button { padding: 22px 52px; font-size: 22px; }
+  .quote-row { column-gap: 130px; padding: 90px 130px 130px; }
+  .quote-card { padding: 36px 44px 44px; }
+  .quote-card p { font-size: 28px; }
+  .quote-mark { font-size: 60px; }
+}
+
+/* 2000px - 2299px */
+@media (min-width: 2000px) and (max-width: 2299px) {
+  .page { padding: 32px 100px 64px; }
+  .hero-title { font-size: 78px; }
+  .subhead p { font-size: 36px; }
+  .link { font-size: 22px; }
+  
+  .caps4-bg { width: 1000px; height: 1065px; top: -600px; right: -300px; }
+  .caps6-bg { width: 875px; height: 1125px; right: -270px; }
+  .caps7-bg { width: 1375px; height: 1625px; top: -520px; left: -375px; }
+  
+  .midline-block { column-gap: 120px; padding: 0px 100px 0; }
+  .mid-copy p { font-size: 28px; }
+  .petition-row { column-gap: 120px; padding: 80px 120px 0; }
+  .petition-text { font-size: 22px; }
+  .cta-line { font-size: 30px; }
+  .cta-button { padding: 20px 48px; font-size: 20px; }
+  .quote-row { column-gap: 120px; padding: 80px 120px 120px; }
+  .quote-card { padding: 32px 40px 40px; }
+  .quote-card p { font-size: 26px; }
+  .quote-mark { font-size: 56px; }
+}
+
+/* 1800px - 1999px */
+@media (min-width: 1800px) and (max-width: 1999px) {
+  .page { padding: 28px 90px 56px; }
+  .hero-title { font-size: 72px; }
+  .subhead p { font-size: 34px; }
+  .link { font-size: 21px; }
+  
+  .caps4-bg { width: 920px; height: 980px; top: -552px; right: -276px; }
+  .caps6-bg { width: 805px; height: 1035px; right: -248px; }
+  .caps7-bg { width: 1265px; height: 1495px; top: -478px; left: -345px; }
+  
+  .midline-block { column-gap: 110px; padding: 0px 90px 0; }
+  .mid-copy p { font-size: 26px; }
+  .petition-row { column-gap: 110px; padding: 75px 110px 0; }
+  .petition-text { font-size: 21px; }
+  .cta-line { font-size: 28px; }
+  .cta-button { padding: 19px 44px; font-size: 19px; }
+  .quote-row { column-gap: 110px; padding: 75px 110px 110px; }
+  .quote-card { padding: 30px 38px 38px; }
+  .quote-card p { font-size: 24px; }
+  .quote-mark { font-size: 52px; }
+}
+
+/* 1600px - 1799px */
+@media (min-width: 1600px) and (max-width: 1799px) {
+  .page { padding: 26px 80px 52px; }
+  .hero-title { font-size: 68px; }
+  .subhead p { font-size: 32px; }
+  .link { font-size: 20px; }
+  
+  .caps4-bg { width: 860px; height: 915px; top: -516px; right: -258px; }
+  .caps6-bg { width: 750px; height: 965px; right: -232px; }
+  .caps7-bg { width: 1180px; height: 1395px; top: -446px; left: -322px; }
+  
+  .midline-block { column-gap: 100px; padding: 0px 80px 0; }
+  .mid-copy p { font-size: 24px; }
+  .petition-row { column-gap: 100px; padding: 70px 100px 0; }
+  .petition-text { font-size: 20px; }
+  .cta-line { font-size: 26px; }
+  .cta-button { padding: 18px 42px; font-size: 18px; }
+  .quote-row { column-gap: 100px; padding: 70px 100px 110px; }
+  .quote-card { padding: 28px 36px 36px; }
+  .quote-card p { font-size: 23px; }
+  .quote-mark { font-size: 50px; }
+}
+
+/* 1400px - 1599px */
+@media (min-width: 1400px) and (max-width: 1599px) {
+  .page { padding: 24px 70px 50px; }
+  .hero-title { font-size: 65px; }
+  .subhead p { font-size: 30px; }
+  .link { font-size: 19px; }
+  
+  .caps4-bg { width: 780px; height: 830px; top: -468px; right: -234px; }
+  .caps6-bg { width: 680px; height: 875px; right: -210px; }
+  .caps7-bg { width: 1070px; height: 1265px; top: -405px; left: -292px; }
+  
+  .midline-block { column-gap: 95px; padding: 0px 70px 0; }
+  .mid-copy p { font-size: 23px; }
+  .petition-row { column-gap: 95px; padding: 65px 95px 0; }
+  .petition-text { font-size: 19px; }
+  .cta-line { font-size: 25px; }
+  .cta-button { padding: 18px 40px; font-size: 17px; }
+  .quote-row { column-gap: 95px; padding: 65px 95px 105px; }
+  .quote-card { padding: 27px 34px 34px; }
+  .quote-card p { font-size: 22px; }
+  .quote-mark { font-size: 48px; }
+}
+
+/* 1200px - 1399px */
+@media (min-width: 1201px) and (max-width: 1399px) {
+  .page { padding: 22px 60px 48px; }
+  .content-1 { padding-left: 30px; }
+  .hero-title { font-size: 60px; }
+  .subhead p { font-size: 28px; }
+  .link { font-size: 18px; }
+  
+  .caps4-bg { width: 720px; height: 765px; top: -432px; right: -216px; }
+  .caps6-bg { width: 630px; height: 810px; right: -195px; }
+  .caps7-bg { width: 990px; height: 1170px; top: -374px; left: -270px; }
+  
+  .midline-block { column-gap: 90px; padding: 0px 70px 0; }
+  .mid-copy p { font-size: 22px; }
+  .petition-row { column-gap: 90px; padding: 60px 90px 0; }
+  .petition-text { font-size: 18px; }
+  .cta-line { font-size: 24px; }
+  .cta-button { padding: 17px 38px; font-size: 16px; }
+  .quote-row { column-gap: 90px; padding: 60px 90px 100px; }
+  .quote-card { padding: 26px 32px 32px; }
+  .quote-card p { font-size: 21px; }
+  .quote-mark { font-size: 46px; }
+}
+
+/* 1000px - 1200px */
+@media (min-width: 1001px) and (max-width: 1200px) {
+  .page { padding: 20px 50px 44px; }
+  .content-1 { padding-left: 25px; }
+  .hero-title { font-size: 56px; }
+  .subhead p { font-size: 26px; }
+  .link { font-size: 18px; }
+  
+  .caps4-bg { width: 660px; height: 703px; top: -397px; right: -198px; }
+  .caps6-bg { width: 575px; height: 740px; right: -178px; }
+  .caps7-bg { width: 910px; height: 1075px; top: -344px; left: -248px; }
+  
+  .midline-block { column-gap: 85px; padding: 0px 60px 0; }
+  .mid-copy p { font-size: 21px; }
+  .petition-row { column-gap: 85px; padding: 55px 85px 0; }
+  .petition-text { font-size: 17px; }
+  .cta-line { font-size: 22px; }
+  .cta-button { padding: 16px 36px; font-size: 15px; }
+  .quote-row { column-gap: 85px; padding: 55px 85px 95px; }
+  .quote-card { padding: 25px 30px 30px; }
+  .quote-card p { font-size: 20px; }
+  .quote-mark { font-size: 44px; }
+}
+
+/* 900px - 1000px */
+@media (min-width: 901px) and (max-width: 1000px) {
+  .page { padding: 20px 40px 40px; }
+  .content-1 { padding-left: 20px; }
+  .hero-title { font-size: 52px; }
+  .subhead p { font-size: 25px; }
+  .link { font-size: 17px; }
+  
+  .caps4-bg { width: 600px; height: 640px; top: -360px; right: -180px; }
+  .caps6-bg { width: 525px; height: 675px; right: -162px; }
+  .caps7-bg { width: 825px; height: 975px; top: -312px; left: -225px; }
+  
+  .midline-block { column-gap: 80px; padding: 0px 50px 0; }
+  .mid-copy p { font-size: 20px; }
+  .petition-row { column-gap: 80px; padding: 50px 80px 0; }
+  .petition-text { font-size: 16px; }
+  .cta-line { font-size: 21px; }
+  .cta-button { padding: 16px 35px; font-size: 15px; }
+  .quote-row { column-gap: 80px; padding: 50px 80px 90px; }
+  .quote-card { padding: 24px 28px 28px; }
+  .quote-card p { font-size: 19px; }
+  .quote-mark { font-size: 42px; }
+}
+
+/* 800px - 900px - Transition to stacked layout */
+@media (min-width: 801px) and (max-width: 900px) {
+  .page { padding: 20px 36px 38px; }
+  .content-1 { padding-left: 15px; }
+  .hero-title { font-size: 48px; }
+  .subhead p { font-size: 23px; }
+  .link { font-size: 16px; }
+  
+  .caps4-bg { width: 520px; height: 555px; top: -312px; right: -156px; }
+  .caps6-bg { width: 455px; height: 585px; right: -140px; }
+  .caps7-bg { display: none; }
+  
+  .midline-block { grid-template-columns: 1fr; row-gap: 28px; padding: 20px 36px 0; order: 1; }
+  .mid-copy { grid-column: 1; }
+  .mid-copy p { font-size: 19px; }
+  
+  .content-2 { display: flex; flex-direction: column; }
+  
+  .caps7-mobile { display: block; width: 100%; order: 2; padding: 30px 36px 0; }
+  .caps7-quote-row { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 20px; align-items: start; }
+  .caps7-img-wrapper { display: block; width: 100%; position: relative; top: 0; left: 0; }
+  .caps7-mobile img { width: 100%; height: auto; transform: rotate(15deg) scale(1); display: block; }
+  .mobile-quote-card { border: none; border-radius: 0; padding: 0; background: transparent; box-shadow: none; }
+  .mobile-quote-card .quote-mark { font-size: 36px; font-weight: 800; line-height: 1; color: #1a1a1a; }
+  .mobile-quote-card .quote-mark.end { text-align: right; }
+  .mobile-quote-card p { margin: 10px 0; font-size: 18px; line-height: 1.5; color: #1f1f1f; }
+  
+  .petition-row { grid-template-columns: 1fr; row-gap: 28px; padding: 35px 36px 0; order: 3; margin: 0; }
+  .petition-content { grid-column: 1; }
+  .petition-text { font-size: 16px; }
+  
+  .quote-row { display: flex; flex-direction: column; gap: 36px; padding: 35px 36px 70px; order: 4; margin: 0; }
+  .quote-card { display: none; }
+  .cta-block { width: 100%; }
+  .cta-line { font-size: 20px; }
+  .cta-button { padding: 15px 34px; font-size: 15px; }
+}
+
+/* 700px - 800px */
+@media (min-width: 701px) and (max-width: 800px) {
+  .page { padding: 18px 32px 36px; }
+  .content-1 { padding-left: 10px; }
+  .hero-title { font-size: 44px; }
+  .subhead p { font-size: 22px; }
+  .link { font-size: 16px; }
+  
+  .caps4-bg { width: 480px; height: 512px; top: -288px; right: -144px; }
+  .caps6-bg { width: 420px; height: 540px; right: -130px; }
+  .caps7-bg { display: none; }
+  
+  .midline-block { grid-template-columns: 1fr; row-gap: 26px; padding: 18px 32px 0; order: 1; }
   .mid-copy { grid-column: 1; }
   .mid-copy p { font-size: 18px; }
   
-  /* Stack petition row */
-  .petition-row { 
-    grid-template-columns: 1fr; 
-    row-gap: 24px; 
-    padding: 40px 24px 0;
-  }
-  .petition-content { grid-column: 1; }
+  .content-2 { display: flex; flex-direction: column; }
   
-  /* Stack quote row */
-  .quote-row { 
-    display: flex;
-    flex-direction: column; 
-    gap: 32px;
-    padding: 40px 24px 60px;
-  }
-  .quote-card { max-width: 100%; }
+  .caps7-mobile { display: block; width: 100%; order: 2; padding: 28px 32px 0; }
+  .caps7-quote-row { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 18px; align-items: start; }
+  .caps7-img-wrapper { display: block; }
+  .caps7-mobile img { width: 100%; height: auto; transform: rotate(15deg); display: block; }
+  .mobile-quote-card { border: none; border-radius: 0; padding: 0; background: transparent; box-shadow: none; }
+  .mobile-quote-card .quote-mark { font-size: 34px; font-weight: 800; line-height: 1; color: #1a1a1a; }
+  .mobile-quote-card .quote-mark.end { text-align: right; }
+  .mobile-quote-card p { margin: 10px 0; font-size: 17px; line-height: 1.5; color: #1f1f1f; }
+  
+  .petition-row { grid-template-columns: 1fr; row-gap: 26px; padding: 32px 32px 0; order: 3; margin: 0; }
+  .petition-content { grid-column: 1; }
+  .petition-text { font-size: 15px; }
+  
+  .quote-row { display: flex; flex-direction: column; gap: 34px; padding: 32px 32px 68px; order: 4; margin: 0; }
+  .quote-card { display: none; }
   .cta-block { width: 100%; }
+  .cta-line { font-size: 19px; }
+  .cta-button { padding: 14px 32px; font-size: 14px; }
 }
 
-@media (max-width: 640px) {
-  .page { padding: 16px 20px 28px; }
-  .hero-title { font-size: 36px; }
-  .subhead p { font-size: 18px; }
+/* 600px - 700px */
+@media (min-width: 601px) and (max-width: 700px) {
+  .page { padding: 18px 28px 34px; }
+  .content-1 { padding-left: 5px; }
+  .hero-title { font-size: 42px; }
+  .subhead p { font-size: 21px; }
+  .link { font-size: 15px; }
+  
+  .caps4-bg { width: 440px; height: 469px; top: -264px; right: -132px; }
+  .caps6-bg { width: 385px; height: 495px; right: -119px; }
+  .caps7-bg { display: none; }
+  
+  .midline-block { grid-template-columns: 1fr; row-gap: 24px; padding: 16px 28px 0; order: 1; }
+  .mid-copy { grid-column: 1; }
+  .mid-copy p { font-size: 17px; }
+  
+  .content-2 { display: flex; flex-direction: column; }
+  
+  .caps7-mobile { display: block; width: 100%; order: 2; padding: 26px 28px 0; }
+  .caps7-quote-row { display: grid; grid-template-columns: 0.75fr 1.25fr; gap: 16px; align-items: start; }
+  .caps7-img-wrapper { display: block; }
+  .caps7-mobile img { width: 100%; height: auto; transform: rotate(15deg); display: block; }
+  .mobile-quote-card { border: none; border-radius: 0; padding: 0; background: transparent; box-shadow: none; }
+  .mobile-quote-card .quote-mark { font-size: 32px; font-weight: 800; line-height: 1; color: #1a1a1a; }
+  .mobile-quote-card .quote-mark.end { text-align: right; }
+  .mobile-quote-card p { margin: 10px 0; font-size: 17px; line-height: 1.5; color: #1f1f1f; }
+  
+  .petition-row { grid-template-columns: 1fr; row-gap: 24px; padding: 30px 28px 0; order: 3; margin: 0; }
+  .petition-content { grid-column: 1; }
+  .petition-text { font-size: 15px; }
+  
+  .quote-row { display: flex; flex-direction: column; gap: 32px; padding: 30px 28px 64px; order: 4; margin: 0; }
+  .quote-card { display: none; }
+  .cta-block { width: 100%; }
+  .cta-line { font-size: 19px; }
+  .cta-button { padding: 14px 30px; font-size: 14px; width: 100%; text-align: center; }
+}
+
+/* 500px - 600px */
+@media (min-width: 501px) and (max-width: 600px) {
+  .page { padding: 16px 24px 32px; }
+  .content-1 { padding-left: 0; }
+  .hero-title { font-size: 38px; }
+  .subhead p { font-size: 19px; }
+  .link { font-size: 15px; }
+  
+  .caps4-bg { width: 380px; height: 405px; top: -228px; right: -114px; }
+  .caps6-bg { width: 332px; height: 427px; right: -103px; }
+  .caps7-bg { display: none; }
+  
+  .midline-block { grid-template-columns: 1fr; row-gap: 22px; padding: 14px 24px 0; order: 1; }
+  .mid-copy { grid-column: 1; }
+  .mid-copy p { font-size: 17px; }
+  
+  .content-2 { display: flex; flex-direction: column; }
+  
+  .caps7-mobile { display: block; width: 100%; order: 2; padding: 24px 24px 0; }
+  .caps7-quote-row { display: grid; grid-template-columns: 0.7fr 1.3fr; gap: 14px; align-items: start; }
+  .caps7-img-wrapper { display: block; }
+  .caps7-mobile img { width: 100%; height: auto; transform: rotate(15deg); display: block; }
+  .mobile-quote-card { border: none; border-radius: 0; padding: 0; background: transparent; box-shadow: none; }
+  .mobile-quote-card .quote-mark { font-size: 30px; font-weight: 800; line-height: 1; color: #1a1a1a; }
+  .mobile-quote-card .quote-mark.end { text-align: right; }
+  .mobile-quote-card p { margin: 10px 0; font-size: 17px; line-height: 1.5; color: #1f1f1f; }
+  
+  .petition-row { grid-template-columns: 1fr; row-gap: 22px; padding: 28px 24px 0; order: 3; margin: 0; }
+  .petition-content { grid-column: 1; }
+  .petition-text { font-size: 14px; }
+  
+  .quote-row { display: flex; flex-direction: column; gap: 30px; padding: 28px 24px 60px; order: 4; margin: 0; }
+  .quote-card { display: none; }
+  .cta-block { width: 100%; }
+  .cta-line { font-size: 18px; }
+  .cta-button { padding: 14px 28px; font-size: 14px; width: 100%; text-align: center; }
+}
+
+/* 400px - 500px */
+@media (min-width: 401px) and (max-width: 500px) {
+  .page { padding: 16px 20px 20px; }
+  .page-1 { padding-bottom: 0; margin-bottom: -50px; left:20px;}
+  .page-2 { padding-top: 0; margin-top: -100px; }
+  .content-1 { padding-left: 0; }
+  .hero-title { font-size: 34px; line-height: 1.2;}
+  .subhead p { font-size: 20px; max-width: 200px;}
   .link { font-size: 14px; }
   
-  /* Mobile text sizes */
-  .mid-copy p { font-size: 16px; }
-  .petition-text { font-size: 14px; }
+  .caps4-bg { width: 400px; height: 400px; top: -214px; right: -122px; }
+  .caps6-bg { width: 350px; height: 450px; top: 310px; right: -118px; transform: rotate(20deg); }
+  .caps7-bg { display: none; }
+  
+  .midline-block { grid-template-columns: 1fr; row-gap: 20px; padding: 5px 20px 0; order: 1; }
+  .mid-copy { grid-column: 1; }
+  .mid-copy p { font-size: 18px; }
+  
+  .content-2 { display: flex; flex-direction: column; }
+  
+  .caps7-mobile { display: block; width: 100%; order: 2; padding: 22px 20px 0; }
+  .caps7-quote-row { display: grid; grid-template-columns: 0.7fr 1.3fr; gap: 12px; align-items: start; }
+  .caps7-img-wrapper { display: block; }
+  .caps7-mobile img { width: 100%; height: auto; transform: rotate(15deg); display: block; }
+  .mobile-quote-card { border: none; border-radius: 0; padding: 0; background: transparent; box-shadow: none; }
+  .mobile-quote-card .quote-mark { font-size: 28px; font-weight: 800; line-height: 1; color: #1a1a1a; }
+  .mobile-quote-card .quote-mark.end { text-align: right; }
+  .mobile-quote-card p { margin: 10px 0; font-size: 18px; line-height: 1.5; color: #1f1f1f; }
+  
+  .petition-row { grid-template-columns: 1fr; row-gap: 20px; padding: 26px 20px 0; order: 3; margin: 0; }
+  .petition-content { grid-column: 1; }
+  .petition-text { font-size: 16px; }
+  
+  .quote-row { display: flex; flex-direction: column; gap: 28px; padding: 26px 20px 55px; order: 4; margin: 0; }
+  .quote-card { display: none; }
+  .cta-block { width: 100%; }
   .cta-line { font-size: 18px; }
-  .cta-button { 
-    padding: 14px 28px; 
-    font-size: 14px;
-    width: 100%;
-    text-align: center;
-  }
-  .quote-card { 
-    padding: 20px 24px;
-  }
-  .quote-card p { font-size: 16px; }
-  .quote-mark { font-size: 32px; }
+  .cta-button { padding: 13px 26px; font-size: 15px; width: 100%; text-align: center; }
+}
+
+/* 300px - 400px */
+@media (min-width: 301px) and (max-width: 400px) {
+  .page { padding: 14px 16px 28px; }
+  .content-1 { padding-left: 0; }
+  .hero-title { font-size: 30px; line-height: 1.2; }
+  .subhead p { font-size: 18px; max-width: 200px; }
+  .link { font-size: 13px; }
+  
+  .caps4-bg { width: 400px; height: 358px; top: -198px; right: -110px; }
+  .caps6-bg { width: 350px; height: 355px; right: -130px; top : 340px; transform: rotate(20deg); }
+  .caps7-bg { display: none; }
+  
+  .midline-block { grid-template-columns: 1fr; row-gap: 18px; padding: 10px 16px 0; order: 1; }
+  .mid-copy { grid-column: 1; }
+  .mid-copy p { font-size: 15px; line-height: 1.5; }
+  
+  .content-2 { display: flex; flex-direction: column; }
+  
+  .caps7-mobile { display: block; width: 100%; order: 2; padding: 20px 16px 0; }
+  .caps7-quote-row { display: grid; grid-template-columns: 0.65fr 1.35fr; gap: 12px; align-items: start; }
+  .caps7-img-wrapper { display: block; max-width: 200px; position: relative; top: -15px; left: -10px; }
+  .caps7-mobile img { width: 100%; height: auto; transform: rotate(15deg); display: block; }
+  .mobile-quote-card { border: none; border-radius: 0; padding: 0; background: transparent; box-shadow: none; }
+  .mobile-quote-card .quote-mark { font-size: 28px; font-weight: 800; line-height: 1; color: #1a1a1a; }
+  .mobile-quote-card .quote-mark.end { text-align: right; }
+  .mobile-quote-card p { margin: 10px 0; font-size: 14px; line-height: 1.5; color: #1f1f1f; }
+  
+  .petition-row { grid-template-columns: 1fr; row-gap: 18px; padding: 24px 16px 0; order: 3; margin: 0; }
+  .petition-content { grid-column: 1; }
+  .petition-text { font-size: 13px; }
+  
+  .quote-row { display: flex; flex-direction: column; gap: 26px; padding: 24px 16px 50px; order: 4; margin: 0; }
+  .quote-card { display: none; }
+  .cta-block { width: 100%; }
+  .cta-line { font-size: 16px; }
+  .cta-button { padding: 12px 24px; font-size: 13px; width: 100%; text-align: center; }
+}
+
+/* 200px - 300px - Ultra small screens */
+@media (min-width: 200px) and (max-width: 300px) {
+  .page { padding: 12px 12px 24px; }
+  .content-1 { padding-left: 0; }
+  .hero-title { font-size: 24px; line-height: 1.25; }
+  .subhead p { font-size: 14px; }
+  .link { font-size: 12px; }
+  
+  .caps4-bg { width: 220px; height: 234px; top: -132px; right: -66px; }
+  .caps6-bg { width: 192px; height: 247px; right: -59px; }
+  .caps7-bg { display: none; }
+  
+  .midline-block { grid-template-columns: 1fr; row-gap: 16px; padding: 8px 12px 0; order: 1; }
+  .mid-copy { grid-column: 1; }
+  .mid-copy p { font-size: 13px; line-height: 1.45; }
+  
+  .content-2 { display: flex; flex-direction: column; }
+  
+  .caps7-mobile { display: block; width: 100%; order: 2; padding: 18px 12px 0; }
+  .caps7-quote-row { display: grid; grid-template-columns: 0.6fr 1.4fr; gap: 10px; align-items: start; }
+  .caps7-img-wrapper { display: block; }
+  .caps7-mobile img { width: 100%; height: auto; transform: rotate(15deg); display: block; }
+  .mobile-quote-card { border: none; border-radius: 0; padding: 0; background: transparent; box-shadow: none; }
+  .mobile-quote-card .quote-mark { font-size: 24px; font-weight: 800; line-height: 1; color: #1a1a1a; }
+  .mobile-quote-card .quote-mark.end { text-align: right; }
+  .mobile-quote-card p { margin: 8px 0; font-size: 12px; line-height: 1.5; color: #1f1f1f; }
+  
+  .petition-row { grid-template-columns: 1fr; row-gap: 16px; padding: 22px 12px 0; order: 3; margin: 0; }
+  .petition-content { grid-column: 1; }
+  .petition-text { font-size: 11px; }
+  
+  .quote-row { display: flex; flex-direction: column; gap: 22px; padding: 22px 12px 45px; order: 4; margin: 0; }
+  .quote-card { display: none; }
+  .cta-block { width: 100%; }
+  .cta-line { font-size: 14px; }
+  .cta-button { padding: 11px 20px; font-size: 12px; width: 100%; text-align: center; }
 }

@@ -236,6 +236,18 @@ body { background: #ffffff; font-family: 'Helvetica Neue', Arial, sans-serif; co
   z-index: 2;
 }
 
+.quote-card::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 10px;
+  bottom: 20px;
+  border: 2px solid #1a1a1a;
+  border-radius: 16px;
+  z-index: -1;
+}
+
 .cta-block {
   display: flex;
   flex-direction: column;
@@ -251,12 +263,14 @@ body { background: #ffffff; font-family: 'Helvetica Neue', Arial, sans-serif; co
   font-weight: 800;
   line-height: 1;
   color: #1a1a1a;
+  position: relative;
+  z-index: 1;
 }
 
 .quote-mark.end { text-align: right; }
 
 .quote-card p {
-  margin: 12px 0;
+  margin: 12px 20px 12px 30px;
   font-size: 19px;
   line-height: 1.5;
   color: #1f1f1f;

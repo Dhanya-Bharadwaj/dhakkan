@@ -1,11 +1,17 @@
 /* Page3.css */
+html {
+  scroll-behavior: smooth;
+}
+
 .page3-container {
   position: relative;
   width: 100vw;
   min-height: 100vh; /* allow content to extend without clipping */
   overflow-x: hidden; /* prevent horizontal scroll */
   overflow-y: visible; /* do not crop bottle when moved upward */
-  z-index: 2; /* stack above page-2 to prevent overlap when scrolling */
+  background: #ffffff; /* solid background to prevent page2 from showing through */
+  z-index: 3; /* stack above page-2 to prevent overlap when scrolling */
+  isolation: isolate; /* create new stacking context */
 }
 
 /* Background bottle image */
@@ -73,15 +79,15 @@
   color: #222;
   z-index: 1;
 }
-/* @media (max-width: 3200px) {
-  .bottle-bg { width: 750px; height: 1180px; left :1300px; }
-  .left-text-block { max-width: 880px; left: 60px; top: 120px; }
-  .left-title { font-size: 60px; }
+ @media (min-width:2400px) and (max-width: 3200px) {
+  .bottle-bg { width: 900px; height: 1480px; left :1300px; }
+  .left-text-block { max-width: 800px; left: 60px; top: 120px; }
+  .left-title { font-size: 70px; }
   .left-subtitle { font-size: 40px; max-width: 550px; }
   .right-text-block { right: 200px; max-width: 680px; font-size: 40px; top: 79%; }
   .navbar-spacer { height: 60px; }
 }
-@media (max-width: 2200px) {
+/*@media (max-width: 2200px) {
   .bottle-bg { width: 550px; height: 880px; left :800px; }
   .left-text-block { max-width: 580px; left: 60px; top: 120px; }
   .left-title { font-size: 30px; }
